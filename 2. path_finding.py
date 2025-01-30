@@ -49,6 +49,12 @@ bfs_path = bfs(G, start_node, target_node)
 print(f"Шлях, знайдений за допомогою DFS: {dfs_path}")
 print(f"Шлях, знайдений за допомогою BFS: {bfs_path}")
 
+# Порівняння результатів
+if dfs_path != bfs_path:
+    print(f"Різниця у шляхах між DFS і BFS:\n  DFS: {dfs_path}\n  BFS: {bfs_path}")
+else:
+    print("Шляхи, знайдені DFS і BFS, однакові")
+
 # Візуалізація графу
 plt.figure(figsize=(8, 6))
 nx.draw(G, with_labels=True, node_color='skyblue', node_size=2000, edge_color='gray', font_size=15)
